@@ -1,7 +1,106 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <body>
 <h1>kevin's website</h1>
 <p>/hosted with GitHub Pages./</p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('stevenrdodd.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        #banner {
+            position: absolute;
+            top: 0;
+            width: 150px; /* Adjust width as needed */
+        }
+
+        #about {
+            margin: 40px auto;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .tab {
+            margin: 40px auto;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .photos img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Site</h1>
+    </header>
+
+    <img id="banner" src="swan.png" alt="Moving Banner">
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>hi! I'm kevin. if you found this site, I don't know how. these are just scraps i'm putting together for a soon-to-be personal website...</p>
+    </section>
+
+    <section class="tab" id="photography">
+        <h2>Photography</h2>
+        <div class="photos">
+            <img src="stevenrdodd.jpg" alt="Photo 1"> <!-- Replace with your photo links -->
+            <img src="stevenrdodd.jpg" alt="Photo 2">
+            <img src="stevenrdodd.jpg" alt="Photo 3">
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for moving the banner
+        const banner = document.getElementById('banner');
+        let position = 0;
+        let direction = 1;
+
+        function moveBanner() {
+            position += direction;
+            banner.style.left = position + 'px';
+            if (position > window.innerWidth || position < -banner.offsetWidth) {
+                position = -banner.offsetWidth; // Reset to the left side
+            }
+            requestAnimationFrame(moveBanner);
+        }
+
+        moveBanner();
+    </script>
 </body>
 </html>
