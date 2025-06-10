@@ -1,7 +1,3 @@
-layout: page
-title: "Photography"
-permalink: /photography
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
